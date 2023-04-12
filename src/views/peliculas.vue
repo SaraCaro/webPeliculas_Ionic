@@ -25,9 +25,9 @@
             <ion-card-title>{{pelicula.Title}}</ion-card-title>
           </ion-card-header>
           <ion-card-content>
-            <img :src="pelicula.Poster" alt="poster">
+            <img id="imagenCard" :src="pelicula.Poster" alt="poster">
           </ion-card-content>
-            <ion-button @click="informacionPelicula(pelicula.imdbID)">Ver detalles</ion-button>
+            <button id="botonBuscar" @click="informacionPelicula(pelicula.imdbID)">Ver detalles</button>
         </ion-card>
       </div>
 
@@ -48,7 +48,7 @@
             <p><b>Fecha de estreno:</b> {{detalles.Released}}</p>
            </div>
           </ion-card-content>
-            <ion-button @click="detallesPelicula = false">Cerrar</ion-button>
+            <button id="botonBuscar" @click="detallesPelicula = false">Cerrar</button>
         </ion-card>
       </ion-modal>
 
@@ -193,15 +193,16 @@ export default defineComponent({
 <style scoped>
 
 #container{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 1em;
 }
 
 #titulo{
   text-align: center;
   margin-top: 20px;
   font-weight: bold;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 #botonBuscar{
@@ -239,4 +240,22 @@ ion-card-title{
 #detalles p{
   font-size: 1.3em;
 }
+
+@media (max-width: 600px) {
+  /* Reglas de estilo para dispositivos móviles */
+  #titulo {
+    font-size: 24px;
+  }
+  #botonBuscar {
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  #imagenCard{
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+
 </style>

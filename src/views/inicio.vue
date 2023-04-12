@@ -1,11 +1,14 @@
 <template>
     
     <ion-page>
-        <ion-header>
-            <ion-toolbar>
-                <ion-title>Inicio</ion-title>
-            </ion-toolbar>
-        </ion-header>
+      <ion-header :translucent="true">
+        <ion-toolbar>
+          <ion-buttons slot="start">
+            <ion-menu-button color="primary"></ion-menu-button>
+          </ion-buttons>
+          <ion-title>Inicio</ion-title>
+        </ion-toolbar>
+      </ion-header>
 
         <ion-content :fullscreen="true">
             <div>
@@ -54,6 +57,8 @@
 
 import {  
   IonContent, 
+  IonButtons,
+  IonMenuButton,
   IonHeader, 
   IonPage, 
   IonTitle, 
@@ -69,6 +74,8 @@ export default defineComponent({
     name: 'Inicio',
     components: {
     IonContent,
+    IonButtons,
+    IonMenuButton,
     IonHeader,
     IonPage,
     IonTitle,

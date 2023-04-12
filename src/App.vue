@@ -14,6 +14,11 @@
             </ion-menu-toggle>
           </ion-list>
 
+          <ion-item href="https://github.com/SaraCaro" target="_blank" rel="noopener noreferrer" lines="none" detail="false">
+            <ion-icon aria-hidden="true" slot="start" :ios="logoGithub" :md="logoGithub"></ion-icon>
+            <ion-label>GitHub</ion-label>
+          </ion-item>
+
         </ion-content>
       </ion-menu>
       <ion-router-outlet id="main-content"></ion-router-outlet>
@@ -32,23 +37,14 @@ import {
   IonListHeader,
   IonMenu,
   IonMenuToggle,
-  IonNote,
   IonRouterOutlet,
   IonSplitPane,
 } from '@ionic/vue';
 import { ref } from 'vue';
 import {
-  archiveOutline,
-  archiveSharp,
   gridOutline,
-  heartOutline,
-  heartSharp,
-  invertModeOutline,
-  trashOutline,
-  trashSharp,
   videocamOutline,
-  warningOutline,
-  warningSharp,
+  logoGithub
 } from 'ionicons/icons';
 
 const selectedIndex = ref(0);
