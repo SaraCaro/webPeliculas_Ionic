@@ -136,7 +136,7 @@ export default defineComponent({
         }
         
         this.peticionAjax = true;
-      fetch(`http://www.omdbapi.com/?apikey=e5e01699&s=${this.filtro}&page=${this.pagina}`)
+      fetch(`https://www.omdbapi.com/?apikey=e5e01699&s=${this.filtro}&page=${this.pagina}`)
       .then(response => response.json())
       .then(data => {
         this.peliculas = data.Search;
@@ -150,7 +150,7 @@ export default defineComponent({
     cargarMasPeliculas() {
   if(!this.peticionAjax) {
     this.peticionAjax = true;
-    fetch(`http://www.omdbapi.com/?apikey=e5e01699&s=${this.filtro}&page=${this.pagina}`)
+    fetch(`https://www.omdbapi.com/?apikey=e5e01699&s=${this.filtro}&page=${this.pagina}`)
       .then(response => response.json())
       .then(data => {
         if (data.Response === "True") {
