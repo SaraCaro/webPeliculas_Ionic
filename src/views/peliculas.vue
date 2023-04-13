@@ -52,7 +52,6 @@
         </ion-card>
       </ion-modal>
 
-      <!-- <ion-button @click="cargarMasPeliculas">Cargar mas</ion-button> -->
       <ion-infinite-scroll @ion-infinite="cargarMasPeliculas">
         <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Cargando más películas...">
         </ion-infinite-scroll-content>
@@ -254,6 +253,10 @@ ion-card-title{
   #imagenCard{
     display: block;
     margin: 0 auto;
+  }
+
+  #texto  #imagenModal{
+    width: 100%;
   }
 }
 

@@ -140,6 +140,7 @@ export default defineComponent({
 .gallery__item:nth-child(3){
   grid-column-start: span 2;
 }
+  
 
 </style>
 
